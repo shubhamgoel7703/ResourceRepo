@@ -6,10 +6,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.apache.log4j.Logger;
+
 public class BaseDAB {
 	static String  host = "jdbc:mysql://localhost:3306/shubham";
 	static String db_user = "root";
 	static String db_pass = "";
+
+	static final Logger debugLog = Logger.getLogger("errorLogger");
+	//static final Logger infoLog = Logger.getLogger("infoLogger");
 
 	protected static Connection getConnection() {
 		Connection con = null;
@@ -18,10 +23,12 @@ public class BaseDAB {
 			con = DriverManager.getConnection(host, db_user, db_pass);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			debugLog.error("Class not defined",e);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			debugLog.error("SQL Error",e);
 		}
 
 		return con;
@@ -41,7 +48,8 @@ public class BaseDAB {
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			debugLog.error("SQL error",e);
 		}
 	}
 
@@ -50,4 +58,6 @@ public class BaseDAB {
 		closeResources(null, prepstmt, con);
 	}
 }
+
+
 

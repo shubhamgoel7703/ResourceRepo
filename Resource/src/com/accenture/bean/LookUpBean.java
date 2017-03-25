@@ -1,6 +1,11 @@
 package com.accenture.bean;
 
 public class LookUpBean {
+	@Override
+	public String toString() {
+		return "LookUpBean [id=" + id + ", text=" + text + "]";
+	}
+
 	public int getId() {
 		return id;
 	}
