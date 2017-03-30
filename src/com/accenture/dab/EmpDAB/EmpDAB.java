@@ -23,7 +23,7 @@ public class EmpDAB extends BaseDAB /*implements IEmpDAB*/ {
 
 	static EmpDAB getInstance() {
 	      if(instance == null) {
-	    	 // synchronized(instance) this is latest commit
+	    	  synchronized(instance) this is latest commit
 	    	  {
 	    		  if(instance==null)
 	    		  instance = new EmpDAB();
