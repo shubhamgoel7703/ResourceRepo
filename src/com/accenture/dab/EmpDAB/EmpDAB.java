@@ -24,7 +24,7 @@ public class EmpDAB extends BaseDAB /*implements IEmpDAB*/ {
 	static EmpDAB getInstance() {
 	      if(instance == null) {
 
-	    	  synchronized(instance) // Change from GitHub version 3
+	    	  synchronized(instance) // Change from eclipse version 4
 	    	  {
 	    		  if(instance==null)
 	    		  instance = new EmpDAB();
