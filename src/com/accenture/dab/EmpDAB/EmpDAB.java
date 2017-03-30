@@ -29,9 +29,7 @@ public class EmpDAB extends BaseDAB /*implements IEmpDAB*/ {
 	    		  if(instance==null)
 	    		  instance = new EmpDAB();
 	    		  }
-	    	  //eclipseFunction();
-	    	  //eclipseFunction2(); and 3,4
-	    	  
+	    	 
 	    	  	      
 		      // gitFunction();
 		       // gitFunction2); and 4,5,6,7
